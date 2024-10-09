@@ -10,7 +10,7 @@ export class OutdoorAirflowRateService {
 
     public outdoorAirflowRates: OutdoorAirflowRate[] = [];
 
-    constructor(private http: HttpClient) {
+    constructor() {
         //Load these from server
         // DUMMY DATA...
         this.outdoorAirflowRates.push(

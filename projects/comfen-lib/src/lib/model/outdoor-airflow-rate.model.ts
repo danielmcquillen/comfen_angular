@@ -1,8 +1,8 @@
 export class OutdoorAirflowRate {
-    public flowType!: OutdoorAirFlowType;
-    public buildingType!: BuildingType;
-    public ratePerPerson: number | null = null;
-    public ratePerZoneFloorArea: number | null = null;
+    public flowType: OutdoorAirFlowType;
+    public buildingType: BuildingType;
+    public ratePerPerson: number | null;
+    public ratePerZoneFloorArea: number | null;
 
     constructor(data: {
         flowType: OutdoorAirFlowType;
@@ -15,5 +15,4 @@ export class OutdoorAirflowRate {
         this.ratePerPerson = data.ratePerPerson ?? null;
         this.ratePerZoneFloorArea = data.ratePerZoneFloorArea ?? null;
     }
-
 }
