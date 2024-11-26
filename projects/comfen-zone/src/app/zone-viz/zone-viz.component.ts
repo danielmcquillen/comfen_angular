@@ -7,9 +7,8 @@ extend(THREE);
 extend({ OrbitControls });
 
 @Component({
-  standalone: true,
-  imports: [NgtArgs],
-  template: `
+    imports: [NgtArgs],
+    template: `
   <ngt-ambient-light [intensity]="0.5" />
   <ngt-spot-light [position]="10" [angle]="0.15" [penumbra]="1" />
   <ngt-point-light [position]="-10" />
@@ -28,7 +27,7 @@ extend({ OrbitControls });
   </ngt-mesh>
   <ngt-orbit-controls *args="[camera, glDom]" [enableDamping]="true" />
 `,
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ZoneVizSceneGraph {
   private readonly store = injectStore();
@@ -46,12 +45,11 @@ export class ZoneVizSceneGraph {
 }
 
 @Component({
-  selector: 'zone-viz',
-  standalone: true,
-  imports: [NgtCanvas],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './zone-viz.component.html',
-  styleUrl: './zone-viz.component.scss'
+    selector: 'zone-viz',
+    imports: [NgtCanvas],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './zone-viz.component.html',
+    styleUrl: './zone-viz.component.scss'
 })
 export class ZoneVizComponent {
 
